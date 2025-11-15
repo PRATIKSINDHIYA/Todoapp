@@ -48,7 +48,7 @@ router.post(
 
       // Generate token
       const token = generateToken({
-        userId: user._id.toString(),
+        userId: (user._id as any).toString(),
         email: user.email,
       });
 
@@ -56,7 +56,7 @@ router.post(
         message: 'User created successfully',
         token,
         user: {
-          id: user._id.toString(),
+          id: (user._id as any).toString(),
           name: user.name,
           email: user.email,
         },
@@ -96,7 +96,7 @@ router.post(
 
       // Generate token
       const token = generateToken({
-        userId: user._id.toString(),
+        userId: (user._id as any).toString(),
         email: user.email,
       });
 
@@ -104,7 +104,7 @@ router.post(
         message: 'Sign in successful',
         token,
         user: {
-          id: user._id.toString(),
+          id: (user._id as any).toString(),
           name: user.name,
           email: user.email,
         },

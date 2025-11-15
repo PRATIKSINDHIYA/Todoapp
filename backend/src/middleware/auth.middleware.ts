@@ -4,6 +4,9 @@ import { verifyToken } from '../utils/jwt';
 export interface AuthRequest extends Request {
   userId?: string;
   userEmail?: string;
+  body: any;
+  params: any;
+  headers: any;
 }
 
 export const authenticate = (
